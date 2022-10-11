@@ -7,13 +7,15 @@ import matplotlib.pyplot as pyplot
 
 a = 0
 b = 2 * numpy.pi
-n = 250
+n = 5
+N = 500
 # def f(x): return numpy.sin(x)
-def f(x): return [i**2 for i in x]
+def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
 
 
 # Subdivision de [a,b] en n+1 points équidistants
 X = numpy.linspace(a, b, n)
+Xaff = numpy.linspace(a, b, N)
 
 # V.A = Y
 V = numpy.vander(X, increasing=True)
@@ -33,9 +35,17 @@ def P(x):
         s += A[k] * x**k
     return s
 
+def error():
+    tab = []
+    for i in range(N):
+        tab.append(numpy.abs(P(Xaff[i]) - f(Xaff[i])))
+    return numpy.max(tab)
 
 # Affichage
-pyplot.plot(X, Y)
-pyplot.plot(X, [P(x) for x in X])
+print(error())
+
+pyplot.plot(Xaff, f(Xaff), label="f")
+pyplot.plot(Xaff, [P(x) for x in Xaff], label="P")
 
 pyplot.show()
+
