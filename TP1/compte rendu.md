@@ -28,7 +28,7 @@ On a donc le système matriciel suivant avec `A` la matrice verticale des coeffi
 
 (S) : V A = Y
 
-![image](./systeme.png)
+![image](./images/systeme.png)
 
 ## 2. Résolution et évalutaion de l'erreur
 
@@ -81,7 +81,7 @@ def f(x): return numpy.sin(x)
 
 On obtient une interpolation linéaire peu convaicante avec une `erreur` max d'environ 1.4 :
 
-![image](./n_5.png)
+![image](./images/n_5.png)
 - bleu : fonction f
 - rouge : polynome
 
@@ -89,7 +89,7 @@ Alors on peut décider d'augmenter la valeur de `n` pour s'approcher au maximum 
 
 Pour `n = 12` `erreur` max environ 0.2 :
 
-![image](./n_12.png)
+![image](./images/n_12.png)
 
 On peut donc conclure que `n` qui controle le nombre de subdivision de l'intervalle de recherche `[a,b]` et donc sur la précision de l'interpolation polynomiale puisque il sera de degré au maximum égal à `n`.
 
@@ -108,8 +108,8 @@ def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 +
 ```
 ### n = 5, erreur max 0.5
 
-![](./n_5_1.png)
+![](./images/n_5_1.png)
 
 ### n = 12, erreur max 0.08
 
-![](./n_12_1.png)
+![](./images/n_12_1.png)
