@@ -8,10 +8,10 @@ import matplotlib.pyplot as pyplot
 
 a = -5
 b = 5
-n = 10
+n = 20
 N = 500
-def f(x): return numpy.sin(x)
-# def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
+# def f(x): return numpy.sin(x)
+def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
 
 
 X = numpy.linspace(a, b, n)

@@ -35,7 +35,17 @@ def L(i, x, X):
 
 ## 2. Interpolation polynomiale
 
-Après avoir traduit yi = P(xi), pour i allant de 0 à n, expliquer pourquoi ak = yk.
+P(xi) = yi, pour i allant de 0 à n, se traduit par :
+
+![](./images/trad_pxi=yi.png)
+
+et comme :
+
+![](./images/equality.png)
+
+on a :
+
+![](./images/solution.png)
 
 ```py
 # Fonction qui évalue le polynôme de Lagrange en x réel donné
@@ -61,8 +71,14 @@ pyplot.legend()
 pyplot.show()
 ```
 
-### n = 5
-![image](./images/f_1_n_5.png)
+### f=sin, n = 5
+![image](./images/sin_n_5.png)
 
-### n = 10
-![image](./images/f_1_n_10.png)
+### f=sin, n = 10
+![image](./images/sin_n_10.png)
+
+### f=1/(1 + 10 * x ** 2), n = 5
+![image](./images/f_n_5.png)
+
+### f=1/(1 + 10 * x ** 2), n = 20
+![image](./images/f_n_20.png)
