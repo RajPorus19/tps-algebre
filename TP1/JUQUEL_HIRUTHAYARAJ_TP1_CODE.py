@@ -9,10 +9,10 @@ a = 0
 b = 5 * numpy.pi
 n = 12
 N = 500
-# def f(x): return numpy.sin(x)
+def f(x): return numpy.sin(x)
 
 
-def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
+# def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
 
 
 # Subdivision de [a,b] en n+1 points équidistants
@@ -44,9 +44,9 @@ def Erreur():
 
 
 # Affichage
-print(Erreur())
+# print(Erreur())
 
 pyplot.plot(Xaff, f(Xaff), label="f")
 pyplot.plot(Xaff, [Polynome(x) for x in Xaff], label="P")
 
-pyplot.show()
+# pyplot.show()

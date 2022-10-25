@@ -6,10 +6,10 @@ import matplotlib.pyplot as pyplot
 
 # Entrée
 
-a = -5
-b = 5
-n = 20
-N = 500
+a = -1000
+b = 1000
+n = 500
+N = 5000
 # def f(x): return numpy.sin(x)
 def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
 
@@ -40,6 +40,6 @@ y = P(x, X, Y)
 pyplot.plot(x, y, label='Interpolation')
 pyplot.plot(x, f(x), label='f')
 pyplot.plot(X, Y, 'o', label='Points d\'interpolation')
-pyplot.ylim(-3, 3)
-pyplot.legend()
-pyplot.show()
+# pyplot.ylim(-3, 3)
+# pyplot.legend()
+# pyplot.show()
