@@ -1,45 +1,59 @@
 #!/usr/bin/env python3
 
+from turtle import color
 import numpy
 import matplotlib.pyplot as pyplot
+from copy import deepcopy
 
 
 # Entrée
 
-a = -1000
-b = 1000
-n = 500
-N = 5000
-# def f(x): return numpy.sin(x)
-def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
-
+a = 0
+b = 2 * numpy.pi
+n = 4
+def f(x): return numpy.sin(x)
+# def f(x): return [1/(1 + 10 * i ** 2) for i in x] if type(x) == list else 1/(1 + 10 * x ** 2)
 
 X = numpy.linspace(a, b, n)
 Y = f(X)
-x = numpy.linspace(a, b, N)
 
 # Interpolation polynomiale : Base de Newton
 
-def Newton(X, Y, x):
-    n = len(X)
-    P = numpy.zeros((n, n))
-    P[:, 0] = Y
-    for j in range(1, n):
-        for i in range(n - j):
-            P[i, j] = (P[i + 1, j - 1] - P[i, j - 1]) / (X[i + j] - X[i])
-    y = numpy.zeros(N)
-    for k in range(n):
-        temp = P[0, k]
-        for j in range(k):
-            temp = temp * (x - X[j])
-        y = y + temp
-    return y
+def divis():
+    coeff = deepcopy(Y)
+    for j in range(len(X)):
+        for i in range(len(X) - 1, j, -1):
+            coeff[i] = (coeff[i] - coeff[i - 1]) / (X[i] - X[i - j - 1])
+    return coeff
+
+def Newton(coeff, x):
+    N = 1
+    s = coeff[0]
+    for i in range(1, len(X)):
+        N *= x - X[i - 1]
+        s += coeff[i] * N
+    return s
+
+def Ajout_un_point(xaj,yaj):
+    global X , Y
+    X = numpy.append(X, xaj)
+    Y = numpy.append(Y,yaj)
+    coeff = divis()
+    return coeff
+
 
 # Affichage
+Xaff = numpy.linspace(a, b, 1000)
 
-pyplot.plot(x, f(x), label='f(x)')
-pyplot.plot(x, Newton(X, Y, x), label='Newton')
-pyplot.plot(X, Y, 'o', label='Points d\'interpolation')
-# pyplot.ylim(-3, 3)
-# pyplot.legend()
-# pyplot.show()
+Yexact = f(Xaff)
+pyplot.plot(Xaff, Yexact, label='f(x)', color='red')
+
+Yestime = Newton(divis(), Xaff)
+pyplot.plot(Xaff, Yestime, label='Interpolation polynomiale', color='blue')
+
+Ynew = Newton(Ajout_un_point(1, f(1)), Xaff)
+pyplot.plot(Xaff, Ynew, label='Interpolation polynomiale avec un point ajouté', color='green')
+
+pyplot.ylim(-3, 3)
+pyplot.legend()
+pyplot.show()
