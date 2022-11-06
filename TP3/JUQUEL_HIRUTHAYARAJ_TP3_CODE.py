@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-from turtle import color
 import numpy
 import matplotlib.pyplot as pyplot
 from copy import deepcopy
