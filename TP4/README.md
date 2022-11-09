@@ -31,8 +31,6 @@ On définit la fonction de bezier qui retourne une liste de N points de la courb
 ![equation](https://latex.codecogs.com/gif.latex?B_%7Bn%2Cp%7D%28t%29%20%3D%20%5Csum_%7Bi%3D0%7D%5E%7Bn%7D%5Cbinom%7Bn%7D%7Bi%7D%5Ccdot%20t%5Ei%5Ccdot%281-t%29%5E%7Bn-i%7D)
 
 ```python
-import math
-
 def bezier(points):
     n = len(points)
     x = []
@@ -49,7 +47,7 @@ def bezier(points):
 4. Affichage de la courbe de Bezier
 
 ```python
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 def show(points):
     x, y = bezier(points)
@@ -66,7 +64,7 @@ show((-0.5, 0), (2, 2.5), (-2, 2.5), (0.5, 0))
 Ajout des lignes brisées
 
 ```python
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplot
 
 def show(points):
     x, y = bezier(points)
