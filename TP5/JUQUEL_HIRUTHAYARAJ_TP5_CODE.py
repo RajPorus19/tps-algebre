@@ -42,6 +42,7 @@ def phi4(x):
 X = [1, 5, 7, 8, 10]
 Y = [6, 2, -1, 1, 2]
 V = [3/2, -3, 0, 4, 1]
+colors = ['black', 'orange', 'green', 'purple', 'red']
 
 # Fonction qui calcule le polynôme d'Hermite P(x)
 
@@ -61,5 +62,7 @@ def foncHermite(X, Y, V, x):
 x = numpy.linspace(0, 10, 500)
 pyplot.plot(x, [foncHermite(X, Y, V, i) for i in x])
 for k in range(len(X)):
-    pyplot.plot((X[k]-1, X[k]+1), (Y[k]-V[k], Y[k]+V[k]), 'r')
+    pyplot.plot(X[k], Y[k], 'o', label="(" + str(X[k]) + "," + str(Y[k]) + ")", color=colors[k])
+    pyplot.plot((X[k]-1, X[k]+1), (Y[k]-V[k], Y[k]+V[k]), color=colors[k])
+pyplot.legend()
 pyplot.show()
