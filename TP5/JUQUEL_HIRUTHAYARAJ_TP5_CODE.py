@@ -61,9 +61,9 @@ def foncHermite(X, Y, V, x):
 
 x = numpy.linspace(1, 10, 500)
 pyplot.plot(x, [foncHermite(X, Y, V, i) for i in x])
+pyplot.show()
 for k in range(len(X)):
     pyplot.plot(X[k], Y[k], 'o', label="(" + str(X[k]) +
                 "," + str(Y[k]) + ")", color=colors[k])
     pyplot.plot((X[k]-1, X[k]+1), (Y[k]-V[k], Y[k]+V[k]), color=colors[k])
 pyplot.legend()
-pyplot.show()
