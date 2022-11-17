@@ -116,3 +116,5 @@ pyplot.show()
 ```
 
 ![alt text](./images/curve2.png)
+
+voila.
