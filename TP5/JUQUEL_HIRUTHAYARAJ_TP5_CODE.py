@@ -1,8 +1,8 @@
 
 # calculer les polynômes d'Hermite
 
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy
+import matplotlib.pyplot as pyplot
 
 # Fonction qui calcule les polynômes d'Hermite
 
@@ -25,13 +25,19 @@ def phi4(x):
 # Allure des courbes
 
 
-x = np.linspace(0, 1, 500)
-plt.plot(x, [phi1(i) for i in x], label='phi1')
-plt.plot(x, [phi2(i) for i in x], label='phi2')
-plt.plot(x, [phi3(i) for i in x], label='phi3')
-plt.plot(x, [phi4(i) for i in x], label='phi4')
-plt.legend()
-plt.show()
+# x = numpy.linspace(0, 1, 500)
+# pyplot.plot(x, [phi1(i) for i in x], label='phi1')
+# pyplot.legend()
+# pyplot.show()
+# pyplot.plot(x, [phi2(i) for i in x], label='phi2')
+# pyplot.legend()
+# pyplot.show()
+# pyplot.plot(x, [phi3(i) for i in x], label='phi3')
+# pyplot.legend()
+# pyplot.show()
+# pyplot.plot(x, [phi4(i) for i in x], label='phi4')
+# pyplot.legend()
+# pyplot.show()
 
 X = [1, 5, 7, 8, 10]
 Y = [6, 2, -1, 1, 2]
@@ -52,8 +58,8 @@ def foncHermite(X, Y, V, x):
 # Allure du polynôme d'Hermite
 
 
-x = np.linspace(0, 10, 500)
-plt.plot(x, [foncHermite(X, Y, V, i) for i in x])
+x = numpy.linspace(0, 10, 500)
+pyplot.plot(x, [foncHermite(X, Y, V, i) for i in x])
 for k in range(len(X)):
-    plt.plot((X[k]-1, X[k]+1), (Y[k]-V[k], Y[k]+V[k]))
-plt.show()
+    pyplot.plot((X[k]-1, X[k]+1), (Y[k]-V[k], Y[k]+V[k]), 'r')
+pyplot.show()

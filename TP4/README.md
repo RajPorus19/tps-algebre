@@ -1,3 +1,5 @@
+# Compte rendu TP4 - Courbes de Bézier
+
 1. Fonction binomiale
 
 On défini la fonction binomiale de deux entiers $n$ et $p$ par la formule suivante:
