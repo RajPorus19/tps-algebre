@@ -71,9 +71,9 @@ def phi4(x):
 2. Stockage des tableaux X,Y et V:
 
 ```python
-X = [1, 5, 7, 8, 10]
-Y = [6, 2, -1, 1, 2]
-V = [3/2, -3, 0, 4, 1]
+X = [-5, -2, 0, 3, 6]
+Y = [-4, -1, 1, 1, -1]
+V = [3, 0, 3, -2, 0]
 ```
 
 3. Ecriture de foncHermite qui renvoie le polynome de Hermite:
@@ -95,7 +95,7 @@ def foncHermite(X, Y, V, x):
 import numpy
 import matplotlib.pyplot as pyplot
 
-x = numpy.linspace(0, 10, 500)
+x = numpy.linspace(X[0], X[-1], 500)
 pyplot.plot(x, [foncHermite(X, Y, V, i) for i in x])
 pyplot.show()
 ```
