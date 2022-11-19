@@ -2,7 +2,12 @@
 
 ## I. Base d'Hermite
 
-![tableau]()
+|   | ![phi1](https://latex.codecogs.com/gif.latex?%5Cphi_1) | ![phi2](https://latex.codecogs.com/gif.latex?%5Cphi_2) | ![phi3](https://latex.codecogs.com/gif.latex?%5Cphi_3) | ![phi4](https://latex.codecogs.com/gif.latex?%5Cphi_4) |
+|---|---|---|---|---|
+| ![](https://latex.codecogs.com/gif.latex?%5Cphi%280%29) | 1 | 0 | 0 | 0 |
+| ![](https://latex.codecogs.com/gif.latex?%5Cphi%281%29) | 0 | 1 | 0 | 0 |
+| ![](https://latex.codecogs.com/gif.latex?%5Cphi%5E1%280%29) | 0 | 0 | 1 | 0 |
+| ![](https://latex.codecogs.com/gif.latex?%5Cphi%5E1%281%29) | 0 | 0 | 0 | 1 |
 
 On obtient:
 
@@ -28,8 +33,11 @@ Allure des courbes de la base d'Hermite:
 
 ![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20Y_0%20%5Cphi_1%28x%29%20&plus;%20Y_1%20%5Cphi_2%28x%29%20&plus;%20V_0%20%5Cphi_3%28x%29%20&plus;%20V_1%20%5Cphi_4%28x%29)
 
+car
 
-2. On cherche un polynome P de degré 3 qui passe par deux points A et B et dont on connaît les dérivées VA et VB en XA et XB.
+![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%280%29%20%3D%20Y_0%20%5Ctimes1%20&plus;%20Y_1%20%5Ctimes0%20&plus;%20V_0%20%5Ctimes0%20&plus;%20V_1%20%5Ctimes0%20%3D%20Y_0%20%5C%5C%20P%281%29%20%3D%20Y_0%20%5Ctimes0%20&plus;%20Y_1%20%5Ctimes1%20&plus;%20V_0%20%5Ctimes0%20&plus;%20V_1%20%5Ctimes0%20%3D%20Y_1%20%5C%5C%20P%27%280%29%20%3D%20Y_0%20%5Ctimes0%20&plus;%20Y_1%20%5Ctimes0%20&plus;%20V_0%20%5Ctimes1%20&plus;%20V_1%20%5Ctimes0%20%3D%20V_0%20%5C%5C%20P%27%281%29%20%3D%20Y_0%20%5Ctimes0%20&plus;%20Y_1%20%5Ctimes0%20&plus;%20V_0%20%5Ctimes0%20&plus;%20V_1%20%5Ctimes1%20%3D%20V_1%20%5Cend%7Bcases%7D)
+
+1. On cherche un polynome P de degré 3 qui passe par deux points A et B et dont on connaît les dérivées VA et VB en XA et XB.
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%28X_A%29%20%3D%20Y_A%20%5C%5C%20P%28X_B%29%20%3D%20Y_B%20%5C%5C%20P%27%28X_A%29%20%3D%20V_A%20%5C%5C%20P%27%28X_B%29%20%3D%20V_B%20%5Cend%7Bcases%7D)
 
@@ -39,6 +47,10 @@ On pose
 
 ![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20Y_A%20%5Cphi_1%28t%29%20&plus;%20Y_B%20%5Cphi_2%28t%29%20&plus;%20V_A%20%5Cphi_3%28t%29%20&plus;%20V_B%20%5Cphi_4%28t%29)
 
+car
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%28X_A%29%20%3D%20Y_A%20%5Ctimes1%20&plus;%20Y_B%20%5Ctimes0%20&plus;%20V_A%20%5Ctimes0%20&plus;%20V_B%20%5Ctimes0%20%3D%20Y_A%20%5C%5C%20P%28X_B%29%20%3D%20Y_A%20%5Ctimes0%20&plus;%20Y_B%20%5Ctimes1%20&plus;%20V_A%20%5Ctimes0%20&plus;%20V_B%20%5Ctimes0%20%3D%20Y_B%20%5C%5C%20P%27%28X_A%29%20%3D%20Y_A%20%5Ctimes0%20&plus;%20Y_B%20%5Ctimes0%20&plus;%20V_A%20%5Ctimes1%20&plus;%20V_B%20%5Ctimes0%20%3D%20V_A%20%5C%5C%20P%27%28X_B%29%20%3D%20Y_A%20%5Ctimes0%20&plus;%20Y_B%20%5Ctimes0%20&plus;%20V_A%20%5Ctimes0%20&plus;%20V_B%20%5Ctimes1%20%3D%20V_B%20%5Cend%7Bcases%7D)
+
 Exemple:
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%281%29%20%3D%206%20%5C%5C%20P%285%29%20%3D%202%20%5C%5C%20P%27%281%29%20%3D%20%5Cfrac%7B3%7D%7B2%7D%20%5C%5C%20P%27%285%29%20%3D%20-3%20%5Cend%7Bcases%7D)
@@ -46,6 +58,30 @@ Exemple:
 ![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-1%7D%7B4%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-5%7D%7B-4%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-1%7D%7B4%7D%20%5Cright%29%5E2%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-5%7D%7B-4%7D%20%5Cright%29%5E2)
 
 3. Faire la même chose
+
+Soit
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%285%29%20%3D%202%20%5C%5C%20P%287%29%20%3D%20-1%20%5C%5C%20P%27%285%29%20%3D%20-3%20%5C%5C%20P%27%287%29%20%3D%200%20%5Cend%7Bcases%7D)
+
+alors
+
+![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-5%7D%7B2%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-7%7D%7B-2%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-5%7D%7B2%7D%20%5Cright%29%5E2%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-7%7D%7B-2%7D%20%5Cright%29%5E2)
+
+Soit
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%287%29%20%3D%20-1%20%5C%5C%20P%288%29%20%3D%201%20%5C%5C%20P%27%287%29%20%3D%200%20%5C%5C%20P%27%288%29%20%3D%204%20%5Cend%7Bcases%7D)
+
+alors
+
+![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-7%7D%7B1%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-8%7D%7B-1%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-7%7D%7B1%7D%20%5Cright%29%5E2%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-8%7D%7B-1%7D%20%5Cright%29%5E2)
+
+Soit
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20P%288%29%20%3D%201%20%5C%5C%20P%2810%29%20%3D%202%20%5C%5C%20P%27%288%29%20%3D%204%20%5C%5C%20P%27%2810%29%20%3D%201%20%5Cend%7Bcases%7D)
+
+alors
+
+![equation](https://latex.codecogs.com/gif.latex?P%28x%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-8%7D%7B2%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20%5Cfrac%7Bx-10%7D%7B-2%7D%20%5Cright%29%5E3%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-8%7D%7B2%7D%20%5Cright%29%5E2%20&plus;%20%5Cfrac%7B3%7D%7B4%7D%20%5Cleft%28%20%5Cfrac%7Bx-10%7D%7B-2%7D%20%5Cright%29%5E2)
 
 ## II. Interpolation polynomiale
 
