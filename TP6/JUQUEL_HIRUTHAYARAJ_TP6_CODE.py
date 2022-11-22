@@ -36,20 +36,7 @@ def foncHermite(X, Y, V, x):
     return P
 
 
-def matrice(N):
-    S = numpy.zeros((N, N), dtype=int)
-    for k in range(1, N-1):
-        S[k][k-1] = 1
-        S[k][k] = 4
-        S[k][k+1] = 1
-    S[0][0] = 2
-    S[N-1][N-1] = 2
-    S[0][1] = 1
-    S[N-1][N-2] = 1
-    return S
-
-
-def vectZ(Y):
+def vecteurB(Y):
     Z = numpy.zeros(len(Y), dtype=int)
     for k in range(1, len(Y)-1):
         Z[k] = 3*(Y[k+1]-Y[k-1])
@@ -58,14 +45,26 @@ def vectZ(Y):
     return Z
 
 
+def matriceS(n):
+    diag = numpy.zeros(n, dtype=int)
+    diag.fill(4)
+    diag[0] = 2
+    diag[-1] = 2
+    sur_sous_diag = numpy.zeros(n-1, dtype=int)
+    sur_sous_diag.fill(1)
+    S = numpy.diag(diag) + numpy.diag(sur_sous_diag, k=1) + \
+        numpy.diag(sur_sous_diag, k=-1)
+    return S
+
+
 X = [7, 0, -8, -8, 0, 7]
 Y = [0, 4, -3, 3, -4, 0]
 T = [0, 1, 2, 3, 4, 5]
 
-Bx = vectZ(X)
-By = vectZ(Y)
+Bx = vecteurB(X)
+By = vecteurB(Y)
 
-S = matrice(len(X))
+S = matriceS(len(X))
 
 Xp = numpy.linalg.solve(S, Bx)
 Yp = numpy.linalg.solve(S, By)
